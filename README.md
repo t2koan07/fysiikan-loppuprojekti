@@ -37,6 +37,9 @@ Käynnistä:
 python3 -m streamlit run app.py
 
 ## Käynnistys (URL-ajo)
+Asenna:
+pip install streamlit numpy pandas scipy matplotlib folium streamlit-folium requests certifi
+
 Aja terminaalissa:
 ```bash
 streamlit run https://raw.githubusercontent.com/t2koan07/fysiikan-loppuprojekti/main/app.py
