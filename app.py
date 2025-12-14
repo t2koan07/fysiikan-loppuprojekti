@@ -283,9 +283,9 @@ with st.sidebar:
     st.subheader("Aikaväli analyysiin")
     t0, t1 = st.slider(
         "Valitse analysoitava aikaväli (s)",
-        min_value=float(t_min),
+        min_value=0.0,
         max_value=float(t_max),
-        value=(float(t_min), float(t_max)),
+        value=(0.0, float(t_max)),
         step=0.5,
     )
 
