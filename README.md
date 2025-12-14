@@ -34,5 +34,5 @@ Käynnistä:
 streamlit run app.py
 
 ## Käynnistys (URL-ajo)
-Korvaa USER, REPO ja BRANCH arvoilla ja aja:
-streamlit run https://raw.githubusercontent.com/USER/REPO/BRANCH/app.py
+streamlit run https://raw.githubusercontent.com/t2koan07/fysiikan-loppuprojekti/main/app.py
+
