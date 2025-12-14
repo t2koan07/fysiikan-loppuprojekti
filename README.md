@@ -34,5 +34,6 @@ Käynnistä:
 streamlit run app.py
 
 ## Käynnistys (URL-ajo)
+Aja terminaalissa:
+```bash
 streamlit run https://raw.githubusercontent.com/t2koan07/fysiikan-loppuprojekti/main/app.py
-
