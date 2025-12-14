@@ -18,6 +18,9 @@ Analyysi on toteutettu Python-skriptinä Streamlit-kirjastolla.
 - Tehospektritiheys (PSD)
 - GPS-reitti kartalla
 
+## Kiihtyvyyskomponentin valinta
+Valitsin analyysiin komponentin `az`, koska siinä kävelyn jaksollinen liike erottui selkeimmin ja askelpiikit vastasivat parhaiten kävelyrytmiä verrattuna vaihtoehtoihin `ax`, `ay` ja `a_mag`.
+
 ## Data
 Repo sisältää datatiedostot:
 - data/Accelerometer.csv

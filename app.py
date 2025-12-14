@@ -301,7 +301,7 @@ with st.sidebar:
         "Valitse analysoitava komponentti",
         options=["ax", "ay", "az", "a_mag"],
         index=2,
-        help="Valitse komponentti, jossa askelrytmi erottuu selkeimmin. Tämä vaikuttaa suodatukseen ja askelmäärän arvioon.",
+        help="Valitsin analyysiin komponentin `az`, koska siinä kävelyn jaksollinen liike erottui selkeimmin ja askelpiikit vastasivat parhaiten kävelyrytmiä verrattuna vaihtoehtoihin `ax`, `ay` ja `a_mag`.",
     )
 
     st.subheader("Suodatus (askelmäärä 1)")
