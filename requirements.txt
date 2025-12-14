@@ -5,3 +5,5 @@ scipy
 matplotlib
 folium
 streamlit-folium
+requests
+certifi

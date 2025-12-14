@@ -8,6 +8,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import io
+import requests
+import certifi
 
 from scipy.signal import butter, filtfilt, find_peaks, welch
 
@@ -59,12 +62,14 @@ def _parse_github_user_repo(remote_url: str) -> Optional[Tuple[str, str]]:
 def _raw_base(user: str, repo: str, branch: str) -> str:
     return f"https://raw.githubusercontent.com/{user}/{repo}/{branch}/data/"
 
-
 @st.cache_data(show_spinner=False)
 def _read_csv_any(source: str) -> pd.DataFrame:
-    """Read CSV from local path or URL, skipping potential metadata lines."""
+    """Read CSV from local path or URL."""
+    if source.startswith("http://") or source.startswith("https://"):
+        r = requests.get(source, timeout=30, verify=certifi.where())
+        r.raise_for_status()
+        return pd.read_csv(io.StringIO(r.text), comment="#")
     return pd.read_csv(source, comment="#")
-
 
 def _find_col(df: pd.DataFrame, candidates: list[str]) -> Optional[str]:
     cols = {c.lower().strip(): c for c in df.columns}
@@ -79,7 +84,6 @@ def _find_col(df: pd.DataFrame, candidates: list[str]) -> Optional[str]:
             if cl in k:
                 return orig
     return None
-
 
 def standardize_acc(df: pd.DataFrame) -> pd.DataFrame:
     t_col = _find_col(df, ["t", "time", "time (s)", "timestamp", "seconds"])
