@@ -38,7 +38,7 @@ python3 -m streamlit run app.py
 
 ## Käynnistys (URL-ajo)
 Asenna:
-pip install streamlit numpy pandas scipy matplotlib folium streamlit-folium requests certifi
+pip3 install streamlit numpy pandas scipy matplotlib folium streamlit-folium requests certifi
 
 Aja terminaalissa:
 ```bash
