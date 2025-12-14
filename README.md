@@ -31,7 +31,7 @@ Asenna riippuvuudet:
 python3 -m pip install -r requirements.txt
 
 Käynnistä:
-streamlit run app.py
+python3 -m streamlit run app.py
 
 ## Käynnistys (URL-ajo)
 Aja terminaalissa:
