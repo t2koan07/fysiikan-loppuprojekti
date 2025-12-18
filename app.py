@@ -307,7 +307,7 @@ with st.sidebar:
     st.subheader("Suodatus (askelmäärä 1)")
     low = st.slider("Alarajataajuus (Hz)", 0.3, 2.0, 0.7, 0.1)
     high = st.slider("Ylärajataajuus (Hz)", 2.0, 10.0, 4.0, 0.5)
-    peak_prom = st.slider("Peak prominence", 0.05, 3.0, 0.4, 0.05)
+    peak_prom = st.slider("Huipun erottuvuus", 0.05, 3.0, 0.4, 0.05)
 
     st.subheader("Fourier (askelmäärä 2)")
     fmin = st.slider("Etsintäalue min (Hz)", 0.3, 2.0, 0.7, 0.1)
